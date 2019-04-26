@@ -1,0 +1,39 @@
+version: "3.7"
+
+volumes:
+  mysql:
+  rabbitmq:
+  redis:
+
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "11001:3306"
+    volumes:
+      - type: volume
+        source: mysql
+        target: /var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    restart: unless-stopped
+    command:
+      - mysqld
+
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11002:11211"
+    restart: unless-stopped
+
+
+
+  redis:
+    image: redis:latest
+    ports:
+      - "11003:6379"
+    volumes:
+      - type: volume
+        source: redis
+        target: /data
+    restart: unless-stopped
