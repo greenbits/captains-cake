@@ -2,7 +2,20 @@
 
 # Goal
 
-Build a webhook microservice. We have a need for a service that will expose an API to our application that will enable us to send reliable webhooks to any passed in URL with JSON payload.
+Build a webhook microservice. We have a need for a service that will expose an API to our application that will enable us to send (should this be received and process?) reliable webhooks to any passed in URL with JSON payload.
+
+E.g.:
+
+{
+  url: 'http://www.google.com',
+  data: { foo: 'bar' }
+}
+
+The webservice will then post to:
+`http://www.google.com`
+
+with the data { foo: 'bar' }
+
 
 # Objectives
 
@@ -19,18 +32,14 @@ We want to measure the following values in you:
 | Humility       | The understanding that they do not know everything, and possibly even the behavior that they don’t know anything. This will lead to a confident caution resulting in tests before code and investigation into the “right” way to solve a problem.                            |
 | Collaboration  | The ability to effectively communicate questions and concerns, to accept input and give it equally.           |
 
-
 # Acceptance Criteria
 
-Build a webhook microservice in either Node or Sinatra that takes a payload
-
+Build a webhook microservice in either Node or Sinatra that takes a payload:
 
 ```javascript
-
 {
   example: 1
 }
-
 ```
 
 and returns
