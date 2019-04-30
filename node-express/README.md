@@ -29,3 +29,8 @@ You can run the testing suite with:
 ```bash
 $ yarn test
 ```
+
+## Running the App
+```bash
+$ yarn start
+```
