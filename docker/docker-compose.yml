@@ -27,7 +27,6 @@ services:
     restart: unless-stopped
 
 
-
   redis:
     image: redis:latest
     ports:
