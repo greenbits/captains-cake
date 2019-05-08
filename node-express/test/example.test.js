@@ -1,20 +1,27 @@
 import request from "supertest";
 import app from '../app';
 import strainNames from '../lib/data';
+import { toFixedInt } from '../lib'
 
 // https://jestjs.io/
 // https://github.com/visionmedia/supertest
 
+
 describe("Integration: /order", () => {
-  it("should return an order on POST", async () => {
+
+  it("should return a new order", async () => {
     const response = await request(app)
       .post('/order')
       .expect(200)
       .expect('Content-Type', "application/json; charset=utf-8");
 
-    expect(strainNames).toContain(response.body["strain"]);
+    const { pricePerGram, total, amount, strain } = response.body;
 
-    expect(response.body["price"]).toBeLessThan(21)
-    expect(response.body["price"]).toBeGreaterThan(5)
+    expect(strainNames).toContain(strain);
+    expect(pricePerGram).toBeLessThan(20.99);
+    expect(pricePerGram).toBeGreaterThan(5);
+
+    expect(total).toEqual(toFixedInt(amount * pricePerGram, 2));
   });
+
 });

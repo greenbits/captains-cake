@@ -12,3 +12,7 @@ export function toFixedInt(floatValue, decimalIdx) {
 }
 
 export const getRandomStrainName = () => choice(strainNames);
+
+export function randomNumber(min, max) {
+  return Math.random() * (max - min + 1) + min;
+}
