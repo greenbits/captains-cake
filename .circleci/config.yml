@@ -66,6 +66,4 @@ workflows:
   here-is-my-workflow-name:
     jobs:
       - install
-      - test:
-          requires:
-            - install
+      - test
