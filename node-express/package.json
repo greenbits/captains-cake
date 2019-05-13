@@ -8,7 +8,7 @@
     "db:drop": "yarn babel-node ./scripts/manage-db.js delete",
     "db:migrate": "yarn babel-node ./scripts/migrate.js",
     "start": "yarn babel-node index.js",
-    "test": "yarn jest"
+    "test": "yarn start & (sleep 5 && yarn jest --watch) & wait;"
   },
   "author": "",
   "license": "ISC",

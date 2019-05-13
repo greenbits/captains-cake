@@ -28,3 +28,8 @@ $ rake db:create_migration NAME=<table_name>
 ```bash
 $ ruby app.rb
 ```
+
+## Running tests
+```bash
+$ bundle exec rspec spec
+```
