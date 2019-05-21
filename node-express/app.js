@@ -5,7 +5,6 @@ import { saveItem, getItems } from './db';
 const app = express();
 
 const saveOrder = saveItem.bind(null, "order");
-const getOrders = getItems.bind(null, "order");
 
 app.post('/order', async (req, res) => {
   // Generate a price per gram of ~$5-25.99

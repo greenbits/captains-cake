@@ -4,6 +4,11 @@ https://github.com/sinatra/sinatra
 
 
 ## Setting up
+Install dependencies:
+```bash
+$ bundle install
+```
+
 Create & migrate the database:
 ```bash
 $ rake db:create db:migrate
