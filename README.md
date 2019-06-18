@@ -1,5 +1,27 @@
 # Captains Cake
 
+## Objectives of the Challenge
+
+This is a code challenge that we use to measure both your technical knowledge and how you embody the engineering values we have created as a team.
+
+We want to measure the following values in you:
+
+| Value          | Description                 |
+|----------------|-----------------------------|
+| Grit           | The ability to take something you don’t know and figure it out and deliver results |
+| Curiosity      | The desire to learn new things, day-to-day as a full-stack engineer. |
+| Iteration      | The ability to take something complex and break it down into small pieces, and then improve these small pieces overtime. |
+| Delivery       | The ability to take an iterative mindset and reach the acceptance criteria before moving on.|
+| Humility       | The understanding that they do not know everything. |
+| Collaboration  | The ability to effectively communicate questions and concerns, to accept input and give it equally. |
+
+The technical portion we will be measuring you on requires you to do the work below. It entails these 3 steps:
+
+0) Setting up the project,
+1) Defining the acceptance criteria,
+2) Iterating on the code base, and
+3) Trying to pass the acceptance criteria.
+
 ## Setting up Dependencies
 1) Install [docker](https://docs.docker.com/docker-for-mac/install/)
 2) Install rbenv/nodeenv
