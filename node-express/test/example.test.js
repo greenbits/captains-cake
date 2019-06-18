@@ -23,5 +23,4 @@ describe("Integration: /order", () => {
 
     expect(total).toEqual(toFixedInt(amount * pricePerGram, 2));
   });
-
 });
