@@ -2,7 +2,6 @@
 
 https://github.com/sinatra/sinatra
 
-
 ## Setting up
 =======
 Install dependencies:
@@ -10,22 +9,37 @@ Install dependencies:
 $ bundle install
 ```
 
-Create & migrate the database:
+### Creating the database:
 ```bash
-$ rake db:create db:migrate
+$ rake db:create
 ```
 
-## Creating a Migration
+### Creating a Migration
 ```bash
 $ rake db:create_migration NAME=<table_name>
 ```
+#NOTES FLESH THIS OUT MORE ADD IN COLUMNS OR ATTRIBUTES HERE
 
-## Running the app
+### Executing Migrations
+
+If you want to migrate your database:
 ```bash
-$ ruby app.rb
+$ rake db:migrate
 ```
+
+If you want to rollback a migration use:
+```bash
+$ rake db:rollback
+```
+
+### Testing
 
 ## Running tests
 ```bash
 $ bundle exec rspec spec
+```
+
+### Running the app
+```bash
+$ ruby app.rb
 ```
