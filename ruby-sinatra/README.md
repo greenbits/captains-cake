@@ -1,6 +1,4 @@
-# Captain's Cake: Ruby + Sinatra
-
-https://github.com/sinatra/sinatra
+# Captain's Cake: Ruby + [Sinatra](https://github.com/sinatra/sinatra)
 
 ## Setting up
 =======
@@ -15,10 +13,12 @@ $ rake db:create
 ```
 
 ### Creating a Migration
+
+This project use [Sinatra Active Record](https://www.rubydoc.info/gems/sinatra-activerecord/2.0.0). You can can add a migration by running:
+
 ```bash
-$ rake db:create_migration NAME=<table_name>
+$ rake db:create_migration add_thangs_to_helpfultable fieldname:string thangs:boolean
 ```
-#NOTES FLESH THIS OUT MORE ADD IN COLUMNS OR ATTRIBUTES HERE
 
 ### Executing Migrations
 
