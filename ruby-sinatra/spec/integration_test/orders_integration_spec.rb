@@ -1,6 +1,7 @@
 require 'spec_helper'
 require 'rspec'
 require 'rack/test'
+require_relative '../../app/lib/strain_data'
 
 describe 'The Captains Cake App' do
   include Rack::Test::Methods
@@ -10,17 +11,23 @@ describe 'The Captains Cake App' do
   end
 
   it 'should returns a new order' do
+    get '/'
+    expect(last_response).to be_ok
+
+    body = last_response.body
+    expect(body).to eq('Put this in your pipe & smoke it!')
+  end
+
+  it 'should returns a new order' do
     post '/order'
     expect(last_response).to be_ok
 
-    binding.pry
-    body = OpenStruct.new(last_response.body)
+    body = JSON.parse(last_response.body, object_class: OpenStruct)
 
-    # expect('Content-Type', "application/json; charset=utf-8");
-    expect(body.strain_names).toContain(strain);
-    expect(body.pricePerGram).toBeLessThan(20.99);
-    expect(body.pricePerGram).toBeGreaterThan(5);
+    expect(StrainData::NAMES).to include(body.strain)
+    expect(body.price_per_gram).to be <(20.99)
+    expect(body.price_per_gram).to be >(5)
 
-    # expect(total).toEqual(toFixedInt(amount * pricePerGram, 2));
+    expect(body.total).to eq((body.amount * body.price_per_gram).round(2))
   end
 end

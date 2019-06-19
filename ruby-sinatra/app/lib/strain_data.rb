@@ -1,5 +1,5 @@
-module StrainNames
-  [
+module StrainData
+  NAMES = [
     "Blue Dream",
     "Sour Diesel",
     "GSC",
@@ -642,5 +642,5 @@ module StrainNames
     "Master OG",
     "303 OG",
     "Citrix"
-  ]
+  ].freeze
 end
