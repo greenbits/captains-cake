@@ -1,4 +1,4 @@
-module strainNames
+module StrainNames
   [
     "Blue Dream",
     "Sour Diesel",

@@ -1,5 +1,5 @@
-# Menu Example
-require 'lib/data';
+# Menu Examples
+require_relative '../lib/data'
 
 module ApplicationHelper
   def choice(arr)
@@ -8,15 +8,15 @@ module ApplicationHelper
 
   # Round the number to the decimals nth idx, e.g:
   # round(1.005, 2) becomes # 1.01
-  def toFixedInt(floatValue, decimalIdx)
+  def to_fixed_int(floatValue, decimalIdx)
     Number(Math.round(floatValue + 'e' + decimalIdx) + 'e-' + decimalIdx)
   end
 
-  def getRandomStrainName
-    choice(strainNames)
+  def get_random_strain_name
+    choice(StrainNames)
   end
 
-  def randomNumber(min, max)
+  def random_number(min, max)
     rand * (max - min + 1) + min
   end
 end

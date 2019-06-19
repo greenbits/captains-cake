@@ -6,6 +6,7 @@ describe Order do
 
   describe 'name_id' do
     it 'should concatenate the strain id with the strain name' do
+      binding.pry
       expect(order.name_id).to eq(strain + order.id.to_s)
     end
   end
