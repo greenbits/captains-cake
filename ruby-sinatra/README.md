@@ -9,7 +9,7 @@ $ bundle install
 
 ### Creating the database:
 ```bash
-$ rake db:create
+$ bundle exec rake db:create
 ```
 
 ### Creating a Migration
@@ -17,19 +17,24 @@ $ rake db:create
 This project use [Sinatra Active Record](https://www.rubydoc.info/gems/sinatra-activerecord/2.0.0). You can can add a migration by running:
 
 ```bash
-$ rake db:create_migration add_thangs_to_helpfultable fieldname:string thangs:boolean
+$ bundle exec rake db:create_migration add_thangs_to_helpfultable fieldname:string thangs:boolean
 ```
 
 ### Executing Migrations
 
 If you want to migrate your database:
 ```bash
-$ rake db:migrate
+$ bundle exec rake db:migrate
 ```
 
 If you want to rollback a migration use:
 ```bash
-$ rake db:rollback
+$ bundle exec rake db:rollback
+```
+
+If you want to prepare you test database for unit tests
+```bash
+$ bundle exec rake db:test:prepare
 ```
 
 ### Testing
@@ -41,5 +46,5 @@ $ bundle exec rspec spec
 
 ### Running the app
 ```bash
-$ ruby app.rb
+$ bundle exec ruby app.rb
 ```

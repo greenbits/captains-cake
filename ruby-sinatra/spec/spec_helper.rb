@@ -7,6 +7,8 @@ require 'rack/test'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  ActiveRecord::Migration.maintain_test_schema!
+
   config.include Rack::Test::Methods
 
   config.expect_with :rspec do |expectations|

@@ -64,7 +64,7 @@ $ (cd docker && docker-compose down)
 
 ## Problem
 
-We want to build a webhook microservice that takes a URL and some data, and returns X.
+We want to build a microservice that takes a X and some data, and returns X.
 
 ## Choose a framework to solve the problem with
 
