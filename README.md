@@ -19,7 +19,7 @@ The technical portion we will be measuring you on requires you to do the work be
 
 0) Setting up the project,
 1) Give the problem: defining the acceptance criteria,
-2) Iterating on the code base, and
+2) Iterating on imperfect code base, and
 3) Trying to pass the acceptance criteria.
 
 ## Setting up Dependencies
@@ -64,9 +64,12 @@ $ (cd docker && docker-compose down)
 
 ## Problem
 
-We want to build a microservice that takes a X and some data, and returns X.
+We just inherited a cannabis store, and the software they used to run the business. We are now in charge of maintaining and improving our API.
+
+Our vendors need a way to record sales as they happen in real-time, to aggregate data so that they can run metrics so they figure out what crops to grow next year. 
+
+We are so successful, we need to start automating the process of tracking what we are selling. We have made an API end point to capture data. Our vendors want to automate their business too, they want to know what to grow so we can sell their product next year.
 
 ## Choose a framework to solve the problem with
 
 [Node/JS](https://github.com/greenbits/captains-cake/tree/master/node-express) or [Sinatra/Ruby](https://github.com/greenbits/captains-cake/tree/master/ruby-sinatra)
-
