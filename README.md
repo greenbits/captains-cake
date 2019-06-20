@@ -15,7 +15,7 @@ We want to measure the following values in you:
 | Humility       | The understanding that they do not know everything. |
 | Collaboration  | The ability to effectively communicate questions and concerns, to accept input and give it equally. |
 
-The technical portion we will be measuring you on requires you to do the work below. It entails these 3 steps:
+The technical portion we will be measuring you on requires you to do the work below. It entails these 4 steps:
 
 0) Setting up the project,
 1) Give the problem: defining the acceptance criteria,
@@ -68,5 +68,5 @@ We want to build a microservice that takes a X and some data, and returns X.
 
 ## Choose a framework to solve the problem with
 
-[Node/JS](https://github.com/greenbits/captains-cake/tree/master/node-express) or (Sinatra/Ruby)[https://github.com/greenbits/captains-cake/tree/master/ruby-sinatra]
+[Node/JS](https://github.com/greenbits/captains-cake/tree/master/node-express) or [Sinatra/Ruby](https://github.com/greenbits/captains-cake/tree/master/ruby-sinatra)
 
