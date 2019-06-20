@@ -2,9 +2,15 @@ require 'rake'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
+require 'mysql2'
+require 'json'
 
-require './routes'
+class App < Sinatra::Application
+end
 
 # Require models
-current_dir = Dir.pwd
-Dir["#{current_dir}/models/*.rb"].each { |file| require file }
+Dir["./app/models/*.rb"].each { |file| require file }
+Dir["./app/helpers/*.rb"].each { |file| require file }
+Dir["./app/controllers/*.rb"].each { |file| require file }
+
+# App.helpers ApplicationHelper

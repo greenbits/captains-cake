@@ -1,5 +1,27 @@
 # Captains Cake
 
+## Objectives of the Challenge
+
+This is a code challenge that we use to measure both your technical knowledge and how you embody the engineering values we have created as a team.
+
+We want to measure the following values in you:
+
+| Value          | Description                 |
+|----------------|-----------------------------|
+| Grit           | The ability to take something you don’t know and figure it out and deliver results |
+| Curiosity      | The desire to learn new things, day-to-day as a full-stack engineer. |
+| Iteration      | The ability to take something complex and break it down into small pieces, and then improve these small pieces overtime. |
+| Delivery       | The ability to take an iterative mindset and reach the acceptance criteria before moving on.|
+| Humility       | The understanding that they do not know everything. |
+| Collaboration  | The ability to effectively communicate questions and concerns, to accept input and give it equally. |
+
+The technical portion we will be measuring you on requires you to do the work below. It entails these 4 steps:
+
+0) Setting up the project,
+1) Give the problem: defining the acceptance criteria,
+2) Iterating on imperfect code base, and
+3) Trying to pass the acceptance criteria.
+
 ## Setting up Dependencies
 1) Install [docker](https://docs.docker.com/docker-for-mac/install/)
 2) Install rbenv/nodeenv
@@ -20,6 +42,7 @@ $ rbenv install $ruby_version
 ```
 
 # Setting up Backing Services:
+Requirements: Docker
 
 ```bash
 $ (cd docker && docker-compose up -d)
@@ -27,12 +50,26 @@ $ (cd docker && docker-compose up -d)
 
 This will launch the services specified in the [docker-compose.yml](./docker/docker-compose.yml) file
 
-
 | Service          | Name                        | Address           | Description                                                          |
 |------------------|-----------------------------|-------------------|----------------------------------------------------------------------|
-| Mysql         | docker_mysql-database_1  | `127.0.0.1:11001` | A Mysql instance, username is `root`      |
+| Adminer          | docker_adminer_1            | `127.0.0.1:11000` | [Adminer](https://www.adminer.org/) instance for inspecting database contents (http) |
+| Mysql            | docker_mysql-database_1  | `127.0.0.1:11001` | A Mysql instance, username is `root`      |
+| Memcached        | docker_memcached_1          | `127.0.0.1:12002` | A memcached instance                                                 |
+| Redis            | gb-service_redis_1          | `127.0.0.1:12003` | A redis instance                                                     |
 
 To stop the services you can run:
 ```bash
 $ (cd docker && docker-compose down)
 ```
+
+## Problem
+
+We just inherited a cannabis store, and the software they used to run the business. We are now in charge of maintaining and improving our API.
+
+Our vendors need a way to record sales as they happen in real-time, to aggregate data so that they can run metrics so they figure out what crops to grow next year. 
+
+We are so successful, we need to start automating the process of tracking what we are selling. We have made an API end point to capture data. Our vendors want to automate their business too, they want to know what to grow so we can sell their product next year.
+
+## Choose a framework to solve the problem with
+
+[Node/JS](https://github.com/greenbits/captains-cake/tree/master/node-express) or [Sinatra/Ruby](https://github.com/greenbits/captains-cake/tree/master/ruby-sinatra)
